@@ -18,20 +18,15 @@ def main():
                 running = False
             if event.type == pg.KEYDOWN:
                 if event.key == pg.K_UP:
-                    # Zoom In
                     zoom = 'in'
                 if event.key == pg.K_DOWN:
-                    # Zoom Out
                     zoom = 'out'
                 if event.key == pg.K_r:
                     reset = True
 
-
-        # fill the screen with a color to wipe away anything from last frame
         screen.fill("white")
 
-
-        # RENDER YOUR GAME HERE
+        # RENDER THE GAME
         for rect in rects:
             # Reset if user pushes 'R'
             if reset:
